@@ -1,0 +1,1 @@
+cp db.sqlite3 ./backup/"db_$(date +%d-%m-%Y).sqlite3"

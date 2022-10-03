@@ -1,0 +1,24 @@
+--table dropping--
+
+DROP TABLE IF EXISTS location;
+DROP TABLE IF EXISTS room;
+DROP TABLE IF EXISTS availability;
+
+--table creation--
+
+CREATE TABLE location (
+id varchar(50) PRIMARY KEY,
+country varchar(30)
+);
+
+CREATE TABLE room (
+id INTEGER PRIMARY KEY
+);
+
+CREATE TABLE availability (
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+roomId INTEGER,
+date TEXT NOT NULL,
+available varchar(20) NOT NULL,
+FOREIGN KEY (roomId) REFERENCES room(id)
+);
